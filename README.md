@@ -1,2 +1,3 @@
 # hello-world
-learn
+keep learning is the source of acknowlege
+# BE Self-Motivated
