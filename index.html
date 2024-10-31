@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>个人简历</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+   <section id="resume_cn" class="display">
+        <section class="resume_cn">
+            <button onclick="toggleClass()" class="modern-btn">切换语言</button>
+            <h1>吴小龙</h1>
+            <p>联系方式： 13698758690 / xiaolong_wu@tongji.edu.cn</p>
+            <h2>个人简介</h2>
+            <p>在此处撰写你的个人简介。</p>
+            <h2>教育背景</h2>
+            <p>
+            2019.9-2024.6 建筑学学士, 中南大学
+            </p>
+            <h2>工作经历</h2>
+            <p>按时间顺序列出你的工作经历，包括职位、公司名称和工作时间。</p>
+            <h2>项目经验</h2>
+            <ul>提供你参与过的项目列表，包括项目名称、简要描述和你的角色。
+                <li>Datawhale组队学习/书生·浦语大模型实战营</li>
+                <li>
+                    字节跳动冬季青训营/春季训练营-前端专场
+                </li>
+                <li>
+                    DigitalFUTURES Workshop
+                    <ul>
+                        <li>
+                            2024 Ai的礼物—AI设计造物暑期创新创造营
+                        </li>                       
+                        <li>
+                            2023 基于建造优化的强化学习生成式设计（ETH）
+                        </li>
+                        <li>
+                            2022 AI建筑立面理解+诺亚智能立面生成匹配（NCFZ)
+                        </li>
+                    </ul>
+                </li>
+                <li>
+
+                    2022BMWx同济联合创新挑战营
+                </li>
+                <li>
+                    聪明图像 ‘玩中学”设计教育系列工作坊
+                </li>
+                <li>
+                    清华大学未来实验室-空间与媒体组
+                </li>
+                <li>
+                中南大学建筑与艺术学院暑期建造工作坊
+                </li>
+            </ul>
+            <li>
+                <p>项目名称：[项目名称]</p>
+                <p>简要描述：[简要描述]</p>
+                <p>你的角色：[你的角色]</p>
+            </li>
+    
+            <h2>技能</h2>
+            <p>列出你的专业技能，例如编程语言、软件应用等。</p>
+            <h2>奖项与荣誉</h2>
+            <p>列出你获得的奖项、荣誉和证书。</p>
+            <ul>
+                <li>
+                    2024届湖南省创新创业优秀毕业生
+                </li>
+                <li>
+                    2024届中南大学校级优秀毕业生
+                </li>
+                <li>
+                    优秀学生干部
+                    军训先进个人
+                </li>
+                <li>
+                    学年二等奖学金
+                    学年三等奖学金
+                </li>
+                
+                    
+            </ul>
+            <h2>兴趣爱好</h2>
+            <p>介绍你的兴趣爱好，以展示你的多元化。</p>
+            <h2>自我评价</h2>
+            <p>在此处撰写你的自我评价和总结。</p>
+            <p id="resume_cn_p">这是默认显示的段落</p>
+        </section>
+        
+    </section>
+
+    <section id="resume_en" class="display-none">
+        <section class="resume_en">
+            <button onclick="toggleClass()" class="modern-btn">switchLanguage</button>
+            <h1>Name</h1>
+            <p>Contact Information: [Phone Number] / [Email Address]</p>
+            <h2>Personal Profile</h2>
+            <p>Write your personal profile here.</p>
+            <h2>Education Background</h2>
+            <p>List your education background, including degree, school name, and time spent at school.</p>
+            <h2>Work Experience</h2>
+            <p>List your work experience, including position, company name, and time spent at the company.</p>
+            <p>
+            Squad leader/concurrently deputy league branch secretary <br /> 2021- 2022<br /> 2019- 2020
+            - Led the branch to win 4 school-level outstanding league days
+            - Won 10 honorary titles such as Excellent Class Collective
+            
+            ** Head of the College Model Room (Laboratory)**<br /> 2021 - 2022
+            
+            - Proficient in laser cutting and 3D printing technology
+            - Responsible for holding school-level model making competitions
+            - Coordinate and organize academic exchange activities and connect school-enterprise cooperation training projects:
+            - "Zhulong" Green Architectural Design "Vocational Training"
+            - "Glorious City Collaborative Education Project Student Training"
+            - Research on the green building innovation project (national level)"Planting Forests-Intelligent Modular Assembled Roof Greening System"(person in charge of Dachuang)
+            
+            ** Member of NEMF Society of Universities **<br />(Construction Planning Professional Society)
+            
+            - Design and implement the physical construction project "Interactive Spaces"
+            - Tongyou School Establishment Planning Student Union Inter-school Exchange  
+          </p>
+            <h2>Project Experience</h2>
+            <p>Provide a list of projects you have participated in, including project name, brief description, and your role.</p>
+            <h2>Skills</h2>
+            <p>List your professional skills, such as programming languages, software applications, etc.</p>
+            <h2>Awards and Honors</h2>
+            <p>List the awards, honors, and certificates you have received.</p>
+        </section>
+    </section>
+</body>
+<script>
+    // 切换语言的函数
+    function toggleClass() {
+        var element = document.getElementById("resume_cn");
+        if (element.classList.contains("display-none")) {
+            element.classList.remove("display-none");
+            element.classList.add("display");
+        } else {
+            element.classList.remove("display");
+            element.classList.add("display-none");
+        }
+       // 获取 id 为 resume_en 的元素
+        var element2 = document.getElementById("resume_en"); 
+        // 判断元素是否包含 display-none 类
+        if (element2.classList.contains("display-none")) { 
+            // 如果元素包含 display-none 类，移除该类
+            element2.classList.remove("display-none"); 
+            // 添加 display 类
+            element2.classList.add("display"); 
+        } else {
+            // 如果元素不包含 display-none 类
+            element2.classList.remove("display"); 
+            // 添加 display-none 类
+            element2.classList.add("display-none"); 
+        }
+
+    }
+</script>
+
+</html>
+

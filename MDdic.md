@@ -79,3 +79,7 @@ term
 - [ ] Update the website
 - [ ] Contact the media
 ```
+
+# 图示
+![alt text](/asset/image/image.png)
+
