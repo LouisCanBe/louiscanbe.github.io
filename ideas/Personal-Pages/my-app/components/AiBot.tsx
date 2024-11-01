@@ -30,10 +30,24 @@
 //             el: document.getElementById('position_demo'),
 //         });
 //     </script>
-
+'use client'
 // components/AiBot.tsx
 import React, { useEffect } from 'react';
-import styles from './ai-bot.module.css';
+import styles from './AiBot.module.css';
+
+interface CozeWebSDKType {
+    WebChatClient: new (options: {
+        config: {
+            bot_id: string;
+        };
+        componentProps: {
+            title: string;
+            icon: string;
+            width: number;
+        };
+        el: HTMLElement | null;
+    }) => void;
+}
 
 const AiBot: React.FC = () => {
   useEffect(() => {
@@ -41,16 +55,15 @@ const AiBot: React.FC = () => {
     const bot_id = '7425929770846371867';
     const title = 'Xiao Wu';
     const icon = 'https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/artist/image/7e813aa2c7e14ebb9e2d1a989acfb128.png';
-    const lang = 'zh-CN';
-    const layout = 'pc';
+    // const lang = 'zh-CN';
+    // const layout = 'pc';
     const width = 500;
 
     const script = document.createElement('script');
     script.src = `https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/${version}/libs/cn/index.js`;
     script.async = true;
     script.onload = () => {
-      // 添加类型断言
-      const CozeWebSDK = (window as any).CozeWebSDK;
+      const CozeWebSDK = (window as unknown as { CozeWebSDK: CozeWebSDKType }).CozeWebSDK;
       if (typeof CozeWebSDK !== 'undefined') {
         new CozeWebSDK.WebChatClient({
           config: {
@@ -73,7 +86,7 @@ const AiBot: React.FC = () => {
   }, []);
 
   return (
-    <div id="position_demo" className={styles.positionDemo}></div>
+    <div id="AiBot" className={styles.AiBot}></div>
   );
 };
 

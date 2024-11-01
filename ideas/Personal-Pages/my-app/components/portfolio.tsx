@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { User, Briefcase, Compass, ChevronRight, ChevronLeft, Mail, Phone, Linkedin, Twitter } from 'lucide-react'
 import { Button } from "@/components/ui/button"
 import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle } from "@/components/ui/sheet"
@@ -177,41 +177,41 @@ export function Portfolio() {
     }
   }
 
-  useEffect(() => {
-    const version = '0.1.0-beta.6';
-    const bot_id = '7425929770846371867';
-    const title = 'Xiao Wu';
-    const icon = 'https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/artist/image/7e813aa2c7e14ebb9e2d1a989acfb128.png';
-    const lang = 'zh-CN';
-    const layout = 'pc';
-    const width = 500;
+  // useEffect(() => {
+  //   const version = '0.1.0-beta.6';
+  //   const bot_id = '7425929770846371867';
+  //   const title = 'Xiao Wu';
+  //   const icon = 'https://lf-bot-studio-plugin-resource.coze.cn/obj/bot-studio-platform-plugin-tos/artist/image/7e813aa2c7e14ebb9e2d1a989acfb128.png';
+  //   const lang = 'zh-CN';
+  //   const layout = 'pc';
+  //   const width = 500;
 
-    const script = document.createElement('script');
-    script.src = `https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/${version}/libs/cn/index.js`;
-    script.async = true;
-    script.onload = () => {
-      // 添加类型断言
-      const CozeWebSDK = (window as any).CozeWebSDK;
-      if (typeof CozeWebSDK !== 'undefined') {
-        new CozeWebSDK.WebChatClient({
-          config: {
-            bot_id,
-          },
-          componentProps: {
-            title,
-            icon,
-            width,
-          },
-          el: document.getElementById('position_demo'),
-        });
-      }
-    };
-    document.body.appendChild(script);
+  //   const script = document.createElement('script');
+  //   script.src = `https://lf-cdn.coze.cn/obj/unpkg/flow-platform/chat-app-sdk/${version}/libs/cn/index.js`;
+  //   script.async = true;
+  //   script.onload = () => {
+  //     // 添加类型断言
+  //     const CozeWebSDK = (window as any).CozeWebSDK;
+  //     if (typeof CozeWebSDK !== 'undefined') {
+  //       new CozeWebSDK.WebChatClient({
+  //         config: {
+  //           bot_id,
+  //         },
+  //         componentProps: {
+  //           title,
+  //           icon,
+  //           width,
+  //         },
+  //         el: document.getElementById('AiBot'),
+  //       });
+  //     }
+  //   };
+  //   document.body.appendChild(script);
 
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
+  //   return () => {
+  //     document.body.removeChild(script);
+  //   };
+  // }, []);
 
   return (
     <div className={`flex h-screen ${colorSchemes[colorScheme].secondary} ${colorSchemes[colorScheme].text}`}>
@@ -514,7 +514,7 @@ export function Portfolio() {
           </div>
         </SheetContent>
       </Sheet>
-      <div id="positionDemo" ></div>
+      {/* <div id="AiBot"  ></div> */}
     </div>
   )
 }
