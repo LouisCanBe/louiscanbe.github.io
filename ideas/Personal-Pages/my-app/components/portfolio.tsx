@@ -250,7 +250,7 @@ export function Portfolio() {
                 className={`w-full justify-start ${activeSection === 'about' ? colorSchemes[colorScheme].text : 'text-gray-600'}`}
                 onClick={() => setActiveSection('about')}
               >
-                <User className="mr-2 h-4 w-4" /> About Me
+                <User className="mr-2 h-4 w-4" /> About Us
               </Button>
             </li>
             <li>
@@ -336,7 +336,7 @@ export function Portfolio() {
         <div className="flex-1 p-8 overflow-auto">
           {activeSection === 'about' && (
             <div>
-              <h2 className="text-2xl font-bold mb-4">About Me</h2>
+              <h2 className="text-2xl font-bold mb-4">About Us</h2>
               <p>I am a passionate designer and product manager with experience in creating user-centered digital products. My approach combines design thinking with strategic product management to deliver exceptional user experiences.</p>
             </div>
           )}

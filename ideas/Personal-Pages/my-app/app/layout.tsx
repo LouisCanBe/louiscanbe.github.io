@@ -14,8 +14,8 @@ const geistMono = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Xiaolong Wu",
-  description: "D&I AI&Data Designer",
+  title: "Louis & Jenny |WU",
+  description: "D&I AI&Data Designer | Design History and Theory",
 };
 
 export default function RootLayout({
