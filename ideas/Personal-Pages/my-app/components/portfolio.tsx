@@ -358,7 +358,7 @@ export function Portfolio() {
                         Explore Project
                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
-                      <Button onClick={() => window.location.href = `http://localhost:3001/`} variant="outline" className="group">
+                      <Button onClick={() => window.location.href = `http://8.149.135.230/tuoping`} variant="outline" className="group">
                         Open Project
                         <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                       </Button>
