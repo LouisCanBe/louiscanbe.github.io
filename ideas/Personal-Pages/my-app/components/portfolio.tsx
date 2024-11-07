@@ -353,10 +353,17 @@ export function Portfolio() {
                     <h3 className={`font-bold mb-2 ${colorSchemes[colorScheme].text}`}>{project.title}</h3>
                     <p className="text-sm mb-2">{project.description}</p>
                     <p className="text-xs mb-4">Duration: {project.duration} | Company: {project.company}</p>
-                    <Button onClick={() => openProjectDrawer(project)} variant="outline" className="group">
-                      Explore Project 
-                      <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-                    </Button>
+                    <div className="flex space-x-2">
+                      <Button onClick={() => openProjectDrawer(project)} variant="outline" className="group">
+                        Explore Project
+                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                      <Button onClick={() => window.location.href = `http://localhost:3001/`} variant="outline" className="group">
+                        Open Project
+                        <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                      </Button>
+                    </div>
+                    <div className="my-1" />
                   </div>
                 ))}
               </div>
