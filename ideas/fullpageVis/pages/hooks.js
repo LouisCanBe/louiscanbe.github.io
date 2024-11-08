@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Head from 'next/head';
-import './styles.css'; // 引入 CSS 文件
 
 const pluginWrapper = () => {
     // Optional: if using fullpage extensions/plugins put them here and pass it as props.
